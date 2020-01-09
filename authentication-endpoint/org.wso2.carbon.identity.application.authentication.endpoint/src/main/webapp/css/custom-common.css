@@ -29,15 +29,7 @@ header .brand h1 em {
     font-style: normal;
     text-transform: uppercase;
 }
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    min-height: 100px;
-    overflow: hidden;
-    color: #cbcbcb;
-    background: #222222;
-}
+
 footer > .container, footer > .container-fluid {
     padding-right: 15px;
     padding-left: 15px;

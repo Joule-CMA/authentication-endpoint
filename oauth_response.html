@@ -1,0 +1,166 @@
+<!-- 
+Variables $redirectURI, $response, will be replaced by the corrosponding values  
+-->
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../authenticationendpoint/images/favicon.png" type="image/x-icon" />
+    <link href="../authenticationendpoint/libs/bootstrap_3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="../authenticationendpoint/css/Roboto.css" rel="stylesheet">
+    <link href="../authenticationendpoint/css/custom-common.css" rel="stylesheet">
+    <link href="../authenticationendpoint/css/all.css" rel="stylesheet">
+    <link href="../authenticationendpoint/css/joule-custom.css" rel="stylesheet">
+    <link href="../authenticationendpoint/css/sassquatch.css" rel="stylesheet">
+    <link href="../authenticationendpoint/css/oauth-response.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">
+
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="header">
+       
+     
+     
+       <div class="header__bar">
+        <div class="container">
+
+          <nav class="nav nav--utility">
+              <ul class="nav__menu nav__menu--social">
+                <li><a href="https://twitter.com/CMA_Docs"><i class="fab fa-twitter" aria-hidden="true"></i><span class="webaim-hidden">on Twitter</span></a></li>
+                <li><a href="https://www.linkedin.com/company/canadian-medical-association"><i class="fab fa-linkedin-in" aria-hidden="true"></i><span class="webaim-hidden">on LinkedIn</span></a></li>
+                <li><a href="https://www.instagram.com/cma_docs/"><i class="fab fa-instagram" aria-hidden="true"></i><span class="webaim-hidden">on Instagram</span></a></li>
+                <li><a href="https://www.facebook.com/CanadianMedicalAssociation"><i class="fab fa-facebook-f" aria-hidden="true"></i><span class="webaim-hidden">on Facebook</span></a></li>
+                <li><a href="https://www.youtube.com/user/CanadianMedicalAssoc"><i class="fab fa-youtube" aria-hidden="true"></i><span class="webaim-hidden">on Youtube</span></a></li>
+            </ul>
+                          <!-- <ul class="links nav__menu nav__menu--language">
+
+                           <li lang="fr-CA"><a id="lnkChangeLanguage" href="https://services.cma.ca/cma/public/oauth/login/displayV2.form#" class="language-link">Français</a></li>
+
+                       </ul> -->
+
+                   </nav>
+               </div>
+           </div>
+           
+           
+           <div class="header__content">
+              <div class="container">
+                <div class="grid">
+                    <div class="grid__col--md-5">
+                        <span class="header__brand"><a href="https://www.cma.ca/"><img src="../authenticationendpoint/images/logo-inverse.png" alt="Canadian Medical Association"></a></span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </header><!-- /header -->
+
+    <!-- page content -->
+    <div class="background-blue row">
+        <div class="col-md-12">
+            <!-- content -->
+            <div class="container">
+
+                <div class="card oauth-response-card" style="display: none;" id="jsEnabled">
+                    <h2 style="font-size: 1.2em;" class="section__title_joule wr-title padding-double white margin-none">
+
+                        <p>Redirecting… please wait.</p>
+                        <p>Redirection… veuillez patienter.</p> </h2>
+                        <form name="myform" method='post' action='$redirectURI'>
+                            <p>
+                                <!--$params-->
+                            <!-- <button class="wr-btn grey-bg col-xs-12 col-md-12 col-lg-12 uppercase font-extra-large margin-bottom-double" type="submit">
+                                Submit
+                            </button> -->
+                        </p>
+                    </form>
+                    <script type='text/javascript'>
+                        var x = document.getElementById("jsDisabled");
+                        var y = document.getElementById("jsEnabled");
+                        if (y.style.display === "none") {
+                            y.style.display = "block";
+                        }
+                        document.myform.submit();
+                    </script>
+                </div>
+
+                <noscript>
+                    <div class="card oauth-response-card" id="jsDisabled">
+                        <h2 style="font-size: 1.2em;" class="section__title_joule wr-title padding-double white margin-none">
+
+                            <p>Redirecting… please wait. / Redirection… veuillez patienter.</p>
+                            <p>If your page doesn’t load, / <br/> Si la page ne s’affiche pas,</p> </h2>
+                            <form name="myform" method='post' action='$redirectURI'>
+                                <p>
+                                    <!--$params-->
+                                    <button class="button button--primary" type="submit">
+                                        Click here to proceed / Cliquez ici
+                                    </button>
+                                </p>
+                            </form>
+                        </div>
+                    </noscript>
+
+                </div>
+                <!-- /content -->
+
+            </div>
+        </div>
+
+        <!-- footer -->
+
+        <footer>
+
+           <div class="footer__bottom">
+            <div class="container">
+              <div class="grid">
+                 <div class="grid__col--md-6">
+                  <p class="copyright-text">© Copyright Canadian Medical Association 2019</p>
+              </div>
+              <div class="grid__col--md-6">
+                  <nav class="nav nav--footer-utility pull-right">
+
+                      <ul data-region="utility_footer" class="nav__menu">
+                         <li>
+                            
+                            <a href="https://www.cma.ca/privacy-policies-cma-and-its-subsidiaries"><span>Privacy</span></a>
+                        </li>
+                        <li>
+                            
+                            <a href="https://www.cma.ca/terms-and-conditions"><span>Terms &amp; Conditions</span></a>
+                        </li>
+                        <li>
+                            
+                            <a href="https://www.cma.ca/accessibility"><span>Accessibility</span></a>
+                        </li>
+                    </ul>
+
+
+                </nav>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</footer><!-- /footer -->
+
+</body>
+
+</html>
